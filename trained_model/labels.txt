@@ -1,0 +1,6 @@
+0 AFD
+1 CDU/CSU
+2 Die Grünen
+3 Die Linke
+4 FDP
+5 SPD
