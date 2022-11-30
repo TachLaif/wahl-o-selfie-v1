@@ -8,7 +8,7 @@
 # More informations about the license can be found at:
 # https://www.gnu.org/licenses/agpl-3.0
 
-__version__ = 1.0.0
+__version__ = '1.0.0'
 
 import face_recognition
 from PIL import Image, ImageDraw, ImageOps
