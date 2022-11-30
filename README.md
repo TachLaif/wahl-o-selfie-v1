@@ -1,6 +1,6 @@
 # Wahl-O-Selfie - ver. 1.0
 <a href="https://www.python.org/downloads/release/python-3107/"><img src="https://img.shields.io/badge/python-3.10.7-success?style=for-the-badge&logo=python&logoColor=white"></img></a>
-<img src="https://img.shields.io/badge/Last%20update-31.10.2022-blue?style=for-the-badge"></img>
+<img src="https://img.shields.io/badge/Last%20update-30.11.2022-blue?style=for-the-badge"></img>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-GNU%20GPLv3-important?style=for-the-badge"></img></a>
 
 
@@ -94,7 +94,7 @@ Download the project as a _.zip file_ and unzip it on your machine. Then open **
 
 ## How to use
 
-A few seconds after running the program a window should open up showing you a picture of a guy with a diagram at the bottom, which gives you the results.
+A few seconds after running the program a window should open up showing you a picture of a guy with a graph at the bottom, which gives you the results.
 In addition to that there are a few new files in the program folder, most importantly _result.jpg_ and _result2.jpg_. _result.jpg_ is just a saved version of the picture you already saw in the window that opened up earlier and _result2.jpg_ is a different way of showing the results. Be aware that these files will be overwritten everytime you run the program, so if you see something you like copy-and-paste it to somewhere else.
 
 If you want to use your own photo, you have to replace _testimage.jpg_ in the program folder. Make sure, that you use the JPG format and that it is called "testimage", otherwise the program will not recognize it. Please be aware, that Wahl-O-Selfie version 1.0 can only process images that contain one face, more or less faces will result in an error.
@@ -196,7 +196,7 @@ Die Linke
 
 At the end it generates two forms of presenting the data in image form.
 
-For the first version ("result.jpg") the program generates a diagram to put under the photo.
+For the first version ("result.jpg") the program generates a graph to put under the photo.
 
 ```python
     partys = [
@@ -216,7 +216,7 @@ For the first version ("result.jpg") the program generates a diagram to put unde
     ax.invert_yaxis()
     ax.set_xlabel('Procent')
     ax.set_title('Wahl-O-selfie')
-    plt.savefig('diagram.png', bbox_inches = "tight")
+    plt.savefig('graph.png', bbox_inches = "tight")
     
     w, h = pil_image.size
     if w < 653:
@@ -225,12 +225,12 @@ For the first version ("result.jpg") the program generates a diagram to put unde
         img = Image.new(mode = 'RGB', size = (w, h + 455), color="white")
     img_w, img_h = img.size
     img.paste(pil_image, (round((img_w - w) / 2), 0))
-    diagram = Image.open('diagram.png')
-    img.paste(diagram, (round((img_w - 653) / 2), h))
+    graph = Image.open('graph.png')
+    img.paste(graph, (round((img_w - 653) / 2), h))
     img.save('result.jpg')
 ```
 
-This code handles generating a diagram with all the percentage values for each party and formatting it so that every bar graph has the right color corresponding to the party it is associated with, printing the corresponding party names besides each graph and putting additional text above and below the bar graph. Furthermore, there is some code which handles what should happen if the testimage is thinner or thicker than the bar graph, so that the graph is always centered.
+This code handles generating a graph with all the percentage values for each party and formatting it so that every bar graph has the right color corresponding to the party it is associated with, printing the corresponding party names besides each graph and putting additional text above and below the bar graph. Furthermore, there is some code which handles what should happen if the testimage is thinner or thicker than the bar graph, so that the graph is always centered.
 
 <img src="https://user-images.githubusercontent.com/104715363/198905504-7fbf4d19-bd1e-4d67-977b-6e6554b19f44.jpg" width="512">
 
@@ -251,11 +251,11 @@ For the second version ("result2.jpg") the program is just printing the party na
 <img src="https://user-images.githubusercontent.com/104715363/177036952-62863484-e06c-495a-858b-b286f619a32b.jpg" width="512" height="512">
 
 ```python
-    os.remove('diagram.png')
+    os.remove('graph.png')
     img.show()
 ```
 
-Finally, it is using the _os library_ to delete a temporarily created "diagram.png" file which contained the previously generated diagram for "result.jpg" and it is showing said result.jpg.
+Finally, it is using the _os library_ to delete a temporarily created "graph.png" file which contained the previously generated graph for "result.jpg" and it is showing said result.jpg.
 
 ## Tests and results
 
