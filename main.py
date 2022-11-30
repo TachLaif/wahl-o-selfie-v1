@@ -45,7 +45,7 @@ else:
     data[0] = normalized_image_array
 
     prediction = model.predict(data)
-    #print(prediction)
+
     AFD = prediction[0, 0]
     CDU_CSU = prediction[0, 1]
     Gruenen = prediction[0, 2]
@@ -95,7 +95,7 @@ else:
     ax.invert_yaxis()
     ax.set_xlabel('Procent')
     ax.set_title('Wahl-O-selfie')
-    plt.savefig('diagram.png', bbox_inches = "tight")
+    plt.savefig('graph.png', bbox_inches = "tight")
     #text_width, text_height = draw.textsize(party)
     #draw.rectangle(((left, bottom - text_height - 10), (right, bottom)), fill = (0, 0, 0), outline = (0, 0, 0))
     #draw.text((left + 6, bottom - text_height - 5), party, fill=(255, 255, 255))
@@ -106,8 +106,8 @@ else:
         img = Image.new(mode = 'RGB', size = (w, h + 455), color="white")
     img_w, img_h = img.size
     img.paste(pil_image, (round((img_w - w) / 2), 0))
-    diagram = Image.open('diagram.png')
-    img.paste(diagram, (round((img_w - 653) / 2), h))
+    graph = Image.open('graph.png')
+    img.paste(graph, (round((img_w - 653) / 2), h))
     img.save('result.jpg')    
     #pil_image.save('processed.jpg')
     text_width, text_height = draw.textsize('Die Grünen - 100.0%')
@@ -120,7 +120,7 @@ else:
     draw.text((left + 6, (bottom + 5) + (text_height * 6 - 20)), 'SPD - ' + str(SPD_percent) + '%', fill=(255, 255, 255))
     pil_image.save('result2.jpg')
     del draw
-    os.remove('diagram.png')
+    os.remove('graph.png')
     img.show()
 #pil_image.show()
 #ai_image.show()
