@@ -1,6 +1,6 @@
 # Copyright (C) 2022 - Benjamin Hupf
 #
-# Wahl-O-Selfie ver. 1 (https://github.com/TachLaif/wahl-o-selfie-v1)
+# Wahl-O-Selfie v1 (https://github.com/TachLaif/wahl-o-selfie-v1)
 # - Made with ♥ by TechLife (https://github.com/TachLaif)
 # Last update: 30.11.2022
 #
@@ -8,7 +8,7 @@
 # More informations about the license can be found at:
 # https://www.gnu.org/licenses/agpl-3.0
 
-__version__ = 1.0
+__version__ = 1.0.0
 
 import face_recognition
 from PIL import Image, ImageDraw, ImageOps
