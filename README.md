@@ -1,7 +1,7 @@
 # Wahl-O-Selfie - v1
 <a href="https://www.python.org/downloads/release/python-3107/"><img src="https://img.shields.io/badge/python-3.10.7-success?style=for-the-badge&logo=python&logoColor=white"></img></a>
 <img src="https://img.shields.io/badge/Last%20update-30.11.2022-blue?style=for-the-badge"></img>
-<a href="https://github.com/TachLaif/Discord-bot-for-SkyBlock-graph/blob/main/LICENSE"><img src="https://img.shields.io/github/license/TachLaif/Discord-bot-for-SkyBlock-graph?style=for-the-badge"></img></a>
+<a href="https://github.com/TachLaif/Discord-bot-for-SkyBlock-graph/blob/main/LICENSE"><img src="https://img.shields.io/github/license/TachLaif/wahl-o-selfie-v1?style=for-the-badge"></img></a>
 
 ## Description
 Wahl-O-Selfie (v1) is using a self-trained machine learning model which categorizes human faces into (german) political partys similar to "<a href="https://www.wahl-o-mat.de">Wahl-O-Mat</a>[^1]".
