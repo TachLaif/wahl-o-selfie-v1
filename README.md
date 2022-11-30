@@ -1,10 +1,10 @@
-# Wahl-O-Selfie - ver. 1.0
+# Wahl-O-Selfie - v1
 <a href="https://www.python.org/downloads/release/python-3107/"><img src="https://img.shields.io/badge/python-3.10.7-success?style=for-the-badge&logo=python&logoColor=white"></img></a>
 <img src="https://img.shields.io/badge/Last%20update-30.11.2022-blue?style=for-the-badge"></img>
 <a href="https://github.com/TachLaif/Discord-bot-for-SkyBlock-graph/blob/main/LICENSE"><img src="https://img.shields.io/github/license/TachLaif/Discord-bot-for-SkyBlock-graph?style=for-the-badge"></img></a>
 
 ## Description
-Wahl-O-Selfie (version 1.0) is using a self-trained machine learning model which categorizes human faces into (german) political partys similar to "<a href="https://www.wahl-o-mat.de">Wahl-O-Mat</a>[^1]".
+Wahl-O-Selfie (v1) is using a self-trained machine learning model which categorizes human faces into (german) political partys similar to "<a href="https://www.wahl-o-mat.de">Wahl-O-Mat</a>[^1]".
 
 
 ## Table of Contents
@@ -27,7 +27,7 @@ Wahl-O-Selfie (version 1.0) is using a self-trained machine learning model which
 - <a href="#postscript">Postscript</a>
 
 ## How to install
-Wahl-O-Selfie (version 1.0) requires:
+Wahl-O-Selfie (v1) requires:
 - <a href="https://www.python.org/downloads/release/python-3107/">Python 3.10.7</a>
 - <a href="https://pypi.org/project/face-recognition/">face_recognition</a>
   - <a href="https://visualstudio.microsoft.com/de/">Microsoft Visual Studio 2015 (or newer)</a>
@@ -95,13 +95,13 @@ Download the project as a _.zip file_ and unzip it on your machine. Then open **
 A few seconds after running the program a window should open up showing you a picture of a guy with a graph at the bottom, which gives you the results.
 In addition to that there are a few new files in the program folder, most importantly _result.jpg_ and _result2.jpg_. _result.jpg_ is just a saved version of the picture you already saw in the window that opened up earlier and _result2.jpg_ is a different way of showing the results. Be aware that these files will be overwritten everytime you run the program, so if you see something you like copy-and-paste it to somewhere else.
 
-If you want to use your own photo, you have to replace _testimage.jpg_ in the program folder. Make sure, that you use the JPG format and that it is called "testimage", otherwise the program will not recognize it. Please be aware, that Wahl-O-Selfie version 1.0 can only process images that contain one face, more or less faces will result in an error.
+If you want to use your own photo, you have to replace _testimage.jpg_ in the program folder. Make sure, that you use the JPG format and that it is called "testimage", otherwise the program will not recognize it. Please be aware, that Wahl-O-Selfie v1 can only process images that contain one face, more or less faces will result in an error.
 
 ## How it works
 
 ### Machine learning model
 
-Wahl-O-Selfie version 1.0 is using a pre-trained Keras model which was trained with 385 pictures of 79 different german politicians from 6 political partys. The pictures used for training the machine learning model were first run through another program which cut-out only the face to make sure that the training data is as accurate as possible without any other data influencing the results. 
+Wahl-O-Selfie v1 is using a pre-trained Keras model which was trained with 385 pictures of 79 different german politicians from 6 political partys. The pictures used for training the machine learning model were first run through another program which cut-out only the face to make sure that the training data is as accurate as possible without any other data influencing the results. 
 
 This means that this photo:
 
@@ -114,7 +114,7 @@ is now this photo:
 
 which is way better training data.
 
-All of the processed pictures were then used in <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a> picture model with the different party names as class names and the corresponding politicians as training data for each class. After trainig the model you can download the trained keras model. The Keras model can be found in "trained_model/keras_model.h5" with a "lables.txt", which contains all the class names and was also downloaded from <a href="https://teachablemachine.withgoogle.com">TeachableMachine</a>. "lables.txt" is not used in Wahl-O-Selfie version 1.0, instead it was just used to get the political partys in the program in the right order as I wanted to associate every party with their corresponding color.
+All of the processed pictures were then used in <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a> picture model with the different party names as class names and the corresponding politicians as training data for each class. After trainig the model you can download the trained keras model. The Keras model can be found in "trained_model/keras_model.h5" with a "lables.txt", which contains all the class names and was also downloaded from <a href="https://teachablemachine.withgoogle.com">TeachableMachine</a>. "lables.txt" is not used in Wahl-O-Selfie v1, instead it was just used to get the political partys in the program in the right order as I wanted to associate every party with their corresponding color.
 
 Every political party has around 65 pictures of 13 different politicians meaning that there are around 5 different photos per politician which was supposed to ensure that the machine learning model focuses only on the face data and not on other parts of the image, like the background color.
 
@@ -143,7 +143,7 @@ The loaded picture then gets analyzed by the face_recognition library and all re
 face_locations = face_recognition.face_locations(picture)
 ```
 
-By using _len()_ the program can get the amount of elements in a list, which is used to get the amount of faces in the picture. Wahl-O-Selfie version 1.0 can only process one face per picture which is why it checks if "face_locations" has more or less elements than one. If one of these if-statements is **True** it prints out the corresponding error in the terminal. There are a few commented out lines in the _more than one face_ case, which are purely for debugging:
+By using _len()_ the program can get the amount of elements in a list, which is used to get the amount of faces in the picture. Wahl-O-Selfie v1 can only process one face per picture which is why it checks if "face_locations" has more or less elements than one. If one of these if-statements is **True** it prints out the corresponding error in the terminal. There are a few commented out lines in the _more than one face_ case, which are purely for debugging:
 
 ```python
    # for(top, right, bottom, left) in face_locations:
@@ -418,7 +418,7 @@ For Test #2 I used random pictures of other people in the political partys to se
 Test #2 had only an accuracy of **20%** which shows that the machine learning model could not identify the reason why someone is in a party instead it could just remember that someone is in a party. This means that the machine learning model is way too small to be able to learn which face should be in which party.
   
 ## Problems
-Wahl-O-Selfie version 1.0 is just a proof of concept, meaning that the dataset used to determin the political party of a face is rather small with an insufficient diversity, resulting in wrong and/or inaccurate results. 
+Wahl-O-Selfie v1 is just a proof of concept, meaning that the dataset used to determin the political party of a face is rather small with an insufficient diversity, resulting in wrong and/or inaccurate results. 
 
 ## License and credits
 
