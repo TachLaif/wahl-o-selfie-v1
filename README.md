@@ -1,9 +1,7 @@
 # Wahl-O-Selfie - ver. 1.0
 <a href="https://www.python.org/downloads/release/python-3107/"><img src="https://img.shields.io/badge/python-3.10.7-success?style=for-the-badge&logo=python&logoColor=white"></img></a>
 <img src="https://img.shields.io/badge/Last%20update-30.11.2022-blue?style=for-the-badge"></img>
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-GNU%20GPLv3-important?style=for-the-badge"></img></a>
-
-
+<a href="https://github.com/TachLaif/Discord-bot-for-SkyBlock-graph/blob/main/LICENSE"><img src="https://img.shields.io/github/license/TachLaif/Discord-bot-for-SkyBlock-graph?style=for-the-badge"></img></a>
 
 ## Description
 Wahl-O-Selfie (version 1.0) is using a self-trained machine learning model which categorizes human faces into (german) political partys similar to "<a href="https://www.wahl-o-mat.de">Wahl-O-Mat</a>[^1]".
@@ -259,6 +257,8 @@ Finally, it is using the _os library_ to delete a temporarily created "graph.png
 
 ## Tests and results
 
+Program tested in **Python 3.10.7**.
+
 ### Test 1
 
 For Test #1 I used different pictures from people that are in the machine learning model to test if the model learned how these people look like and if it is able to recognize them in other pictures.
@@ -422,14 +422,14 @@ Wahl-O-Selfie version 1.0 is just a proof of concept, meaning that the dataset u
 
 ## License and credits
 
-This work is made available under the **GNU General Public License v3.0**.
+This work is made available under the <a href="https://github.com/TachLaif/wahl-o-selfie-v1/blob/main/LICENSE">**GNU Affero General Public License v3.0**</a>.
 
-Project made by <a href="https://github.com/TachLaif">TechLife</a>.
+Project made by **<a href="https://github.com/TachLaif">TechLife</a>**.
 <br><br><a href="https://discord.com"><img src="https://img.shields.io/badge/TechLife-4447-informational?style=for-the-badge&logo=discord&logoColor=white"></a><br><a href="https://twitter.com/_Tech4Life_"><img src="https://img.shields.io/badge/Twitter-@__Tech4Life__-informational?style=for-the-badge&logo=twitter&logoColor=white"></a><br><a href="https://www.buymeacoffee.com/TechLife"><img src="https://img.shields.io/badge/Buy%20me%20a-coffee-red?style=for-the-badge&logo=buymeacoffee&logoColor=white" title="I like coffee!"></a>
 
 ## Postscript
 
-While writing this readme file I found out that something similar was actually build with a much bigger dataset which contained the self-reported political orientation of over a million participants Facebook and dating website accounts from three countries (the U.S, the UK and Canada). This facial recognition model achieved an accuracy of around 72%. If you want to read the article yourself you can find it <a href="https://rdcu.be/cYEvm">HERE</a>.
+While writing this readme file I found out that something similar was actually build with a much bigger dataset which contained the self-reported political orientation of over a million participants from Facebook and dating website accounts from three countries (the U.S, the UK and Canada). This facial recognition model achieved an accuracy of around 72%. If you want to read the article yourself you can find it <a href="https://rdcu.be/cYEvm">HERE</a>.
 
 [^1]: The "<a href="https://www.wahl-o-mat.de">Wahl-O-Mat</a>" is a website by the german <a href="www.bpb.de">bpb</a> with questions which you can fill out and afterwards you can see which political partys have similar interests. This is supposed to help people make up their mind about who they should vote for.
 [^2]: https://github.com/ageitgey/face_recognition/issues/175#issue-257710508
