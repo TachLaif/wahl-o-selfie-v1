@@ -2,13 +2,13 @@
 #
 # Wahl-O-Selfie v1 (https://github.com/TachLaif/wahl-o-selfie-v1)
 # - Made with ♥ by TechLife (https://github.com/TachLaif)
-# Last update: 30.11.2022
+# Last update: 01.12.2022
 #
 # This work is made available under the GNU Affero General Public License v3.0
 # More informations about the license can be found at:
 # https://www.gnu.org/licenses/agpl-3.0
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 import face_recognition
 from PIL import Image, ImageDraw, ImageOps
@@ -96,9 +96,6 @@ else:
     ax.set_xlabel('Procent')
     ax.set_title('Wahl-O-selfie')
     plt.savefig('graph.png', bbox_inches = "tight")
-    #text_width, text_height = draw.textsize(party)
-    #draw.rectangle(((left, bottom - text_height - 10), (right, bottom)), fill = (0, 0, 0), outline = (0, 0, 0))
-    #draw.text((left + 6, bottom - text_height - 5), party, fill=(255, 255, 255))
     w, h = pil_image.size
     if w < 653:
         img = Image.new(mode = 'RGB', size = (653, h + 455), color="white")
@@ -109,7 +106,6 @@ else:
     graph = Image.open('graph.png')
     img.paste(graph, (round((img_w - 653) / 2), h))
     img.save('result.jpg')    
-    #pil_image.save('processed.jpg')
     text_width, text_height = draw.textsize('Die Grünen - 100.0%')
     draw.rectangle(((left,(bottom + 5) + (text_height * 5 + 5)), (right, bottom)), fill = (0, 0, 0), outline = (0, 0, 0))
     draw.text((left + 6, (bottom + 5) + (text_height * 6 - 70)), 'AFD - ' + str(AFD_percent) + '%', fill=(255, 255, 255))
@@ -122,6 +118,4 @@ else:
     del draw
     os.remove('graph.png')
     img.show()
-#pil_image.show()
-#ai_image.show()
 #ai_image.save('processed.jpg')
