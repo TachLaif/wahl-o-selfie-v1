@@ -1,4 +1,4 @@
-# Copyright (C) 2022 - Benjamin Hupf
+# Copyright (C) 2022 - TechLife
 #
 # Wahl-O-Selfie v1 (https://github.com/TachLaif/wahl-o-selfie-v1)
 # - Made with ♥ by TechLife (https://github.com/TachLaif)
